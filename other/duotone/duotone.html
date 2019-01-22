@@ -1,0 +1,53 @@
+<!--              Author: Richard Myatt
+                  Date: 29 November 2018
+
+                  Revision: 1 December 2018.  Image lightened and renamed.
+
+                  A first trial to produce a duotone image.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/duotone.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Duotone</title>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://cdn.jsdelivr.net/gh/aronnax77/svg/other/duotone/images/beard.jpg" alt="man with beard">
+  </div>
+
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+    <filter id="duotone">
+
+      <feColorMatrix
+        type="saturate"
+        values="0"
+        result="grey" />
+
+      <feColorMatrix
+        type="matrix"
+        in="grey"
+        values="
+        0.439 0 0 0 0.05
+        0 0.259 0 0 0.01
+        0 0 0.078 0 0.02
+        0 0 0 1 0" result="toned"/>
+
+        <feComponentTransfer in="toned">
+          <feFuncR type="gamma" amplitude="2" exponent="0.9" offset="0" />
+          <feFuncG type="gamma" amplitude="2" exponent="0.9" offset="0" />
+          <feFuncB type="gamma" amplitude="2" exponent="0.9" offset="0" />
+        </feComponentTransfer>
+
+    </filter>
+
+  </svg>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+/*                Author: Richard Myatt
+                  Date: 26 November 2018
+
+                  An example of the use of the feSpecularLighting filter based
+                  on an example from chapter 11 of 'SVG Essentials' by J.
+                  David Eisenberg.
+*/
+
+body{
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+svg, h1 {
+  margin-left: 20px;
+}

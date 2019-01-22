@@ -1,0 +1,17 @@
+/*                Author: Richard Myatt
+                  Date: 7 December 2018
+
+                  Colour wheel aids to help in understanding svg filters.
+*/
+
+body {
+	background-color: #eee;
+}
+
+h1 {
+	font-size: 25px;
+}
+
+svg, h1 {
+	margin-left: 20px;
+}

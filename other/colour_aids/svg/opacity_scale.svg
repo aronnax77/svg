@@ -1,0 +1,32 @@
+<svg width="210" height="395" viewBox="0 0 210 395"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>Opacity Scale</title>
+
+  <!-- grey scale -->
+  <g id="scale" style="stroke: #000;">
+    <rect x="5" y="5" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 1);" />
+    <rect x="5" y="40" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0.9);" />
+    <rect x="5" y="75" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0.8);" />
+    <rect x="5" y="110" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0.7);" />
+    <rect x="5" y="145" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0.6);" />
+    <rect x="5" y="180" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0.5);" />
+    <rect x="5" y="215" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0.4);" />
+    <rect x="5" y="250" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0.3);" />
+    <rect x="5" y="285" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0.2);" />
+    <rect x="5" y="320" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0.1);" />
+    <rect x="5" y="355" width="200" height="35"
+      style="fill: rgba(0, 0, 0, 0);" />
+  </g>
+
+</svg>

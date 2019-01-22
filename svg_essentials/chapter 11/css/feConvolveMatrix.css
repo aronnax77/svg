@@ -1,0 +1,19 @@
+/*                Author: Richard Myatt
+                  Date: 28 November 2018
+
+                  An example of the use of the feConvolveMatrix filter based on
+                  a similar example in chapter 11 of 'SVG Essentials' by J.
+                  David Eisenberg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+svg, h1 {
+  margin-left: 20px;
+}

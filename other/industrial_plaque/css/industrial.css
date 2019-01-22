@@ -1,0 +1,35 @@
+/*              Author: Richard Myatt
+                  Date: 4 December 2018
+
+                  SVG filters used to simulate a metal plate.
+*/
+
+body {
+  background-color: #888;
+}
+
+.container {
+  width: 50vw;
+  height: 30.12vw;
+  margin: 50px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 8px 3px #333;
+          box-shadow: 5px 8px 3px #333;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .container {
+    width: 70vw;
+    height: 42.17vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 90vw;
+    height: 54.22vw;
+  }
+}

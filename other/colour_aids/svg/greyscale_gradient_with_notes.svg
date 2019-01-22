@@ -1,0 +1,72 @@
+<svg width="500" height="500" viewBox="0 0 500 500"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>Greyscale Gradient</title>
+
+   <!-- provide a white background -->
+   <rect x="0" y="0" width="100%" height="100%"
+     style="fill: #fff; stroke: none;" />
+
+   <svg x="45" y="45" width="210" height="395" viewBox="0 0 210 395"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Greyscale Gradient</title>
+
+       <defs>
+         <linearGradient id="greyScale" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#000"/>
+          <stop offset="100%" stop-color="#fff"/>
+         </linearGradient>
+       </defs>
+
+       <!-- our greyscale gradient -->
+       <rect x="5" y="5" width="200" height="385"
+         style="fill: url(#greyScale); stroke: none;" />
+
+       <!-- overlay rectangles -->
+       <g id="greyscale" style="fill: none; stroke: #000;">
+         <rect x="5" y="5" width="200" height="35" />
+         <rect x="5" y="40" width="200" height="35" />
+         <rect x="5" y="75" width="200" height="35" />
+         <rect x="5" y="110" width="200" height="35" />
+         <rect x="5" y="145" width="200" height="35" />
+         <rect x="5" y="180" width="200" height="35" />
+         <rect x="5" y="215" width="200" height="35" />
+         <rect x="5" y="250" width="200" height="35" />
+         <rect x="5" y="285" width="200" height="35" />
+         <rect x="5" y="320" width="200" height="35" />
+         <rect x="5" y="355" width="200" height="35" />
+        </g>
+
+      </svg>
+
+   <!-- text -->
+
+   <!-- titles -->
+   <text style="fill: #000; text-anchor: middle; font-size: 1.2em; font-weight: bold;">
+     <tspan x="150" y="40">Linear Gradient</tspan>
+     <tspan x="350" y="40">Values</tspan>
+   </text>
+
+   <!-- values -->
+   <text
+     style="fill: #000; text-anchor: middle; font-size: 1em;">
+     <tspan x="350" y="75">#000000</tspan>
+     <tspan x="350" dy="35">#1a1a1a</tspan>
+     <tspan x="350" dy="35">#333333</tspan>
+     <tspan x="350" dy="35">#4d4d4d</tspan>
+     <tspan x="350" dy="35">#666666</tspan>
+     <tspan x="350" dy="35">#808080</tspan>
+     <tspan x="350" dy="35">#999999</tspan>
+     <tspan x="350" dy="35">#b3b3b3</tspan>
+     <tspan x="350" dy="35">#cccccc</tspan>
+     <tspan x="350" dy="35">#e6e6e6</tspan>
+     <tspan x="350" dy="35">#ffffff</tspan>
+   </text>
+
+   <!-- title -->
+   <text x="250" y="480"
+     style="text-anchor: middle; font-size: 1.5em;
+     font-weight: bold;">Greyscale Gradient</text>
+
+</svg>

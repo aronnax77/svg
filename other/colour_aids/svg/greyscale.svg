@@ -1,0 +1,32 @@
+<svg width="210" height="395" viewBox="0 0 210 395"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>Greyscale</title>
+
+    <!-- grey scale -->
+    <g id="greyscale" style="stroke: #000;">
+      <rect x="5" y="5" width="200" height="35"
+        style="fill: #000000;" />
+      <rect x="5" y="40" width="200" height="35"
+        style="fill: #1a1a1a;" />
+      <rect x="5" y="75" width="200" height="35"
+        style="fill: #333333;" />
+      <rect x="5" y="110" width="200" height="35"
+        style="fill: #4d4d4d;" />
+      <rect x="5" y="145" width="200" height="35"
+        style="fill: #666666;" />
+      <rect x="5" y="180" width="200" height="35"
+        style="fill: #808080;" />
+      <rect x="5" y="215" width="200" height="35"
+        style="fill: #999999;" />
+      <rect x="5" y="250" width="200" height="35"
+        style="fill: #b3b3b3;" />
+      <rect x="5" y="285" width="200" height="35"
+        style="fill: #cccccc;" />
+      <rect x="5" y="320" width="200" height="35"
+        style="fill: #e6e6e6;" />
+      <rect x="5" y="355" width="200" height="35"
+        style="fill: #ffffff;" />
+     </g>
+
+</svg>

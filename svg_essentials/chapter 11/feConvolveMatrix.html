@@ -1,0 +1,63 @@
+<!--              Author: Richard Myatt
+                  Date: 28 November 2018
+
+                  An example of the use of the feConvolveMatrix filter based on
+                  a similar example in chapter 11 of 'SVG Essentials' by J.
+                  David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/feConvolveMatrix.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG - feConvolveMatrix demo</title>
+</head>
+<body>
+
+  <h1>SVG - feConvolveMatrix demo</h1>
+
+  <svg width="500" height="250" viewBox="0 0 400 200"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>SVG - feConvolveMatrix demo</title>
+
+   <!-- define image and filter -->
+   <defs>
+
+     <image id="springFlower" xlink:href="svg/spring_flower.svg"
+       x="0" y="0" width="200" height="200" />
+
+     <filter id="emboss">
+
+       <feConvolveMatrix in="flower"
+          bias="0.5"
+  				kernelMatrix="1	0	0	0	0	0	0	0	-1"
+  				preserveAlpha="true"/>
+     </filter>
+
+   </defs>
+
+   <!-- provide a white background -->
+   <rect x="0" y="0" width="100%" height="100%"
+     style="fill: #fff; stroke: none;" />
+
+   <!-- render the original image -->
+   <use xlink:href="#springFlower" x="0" y="0" width="200" height="200" />
+
+   <!-- render the filtered image -->
+   <use xlink:href="#springFlower" x="0" y="0" width="200" height="200"
+     style="filter: url(#emboss);" transform="translate(200, 0)"/>
+
+   <!-- provide text captions -->
+   <g id="txt" style="font-weight: bold; font-size: 0.75em;">
+     <text x="50" y="150">original</text>
+     <text x="225" y="150">feConvolveMatrix</text>
+   </g>
+
+ </svg>
+
+</body>
+</html>

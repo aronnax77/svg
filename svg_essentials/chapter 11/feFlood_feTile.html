@@ -1,0 +1,68 @@
+<!--              Author: Richard Myatt
+                  Date: 25 November 2018
+
+                  An example of the use of SVG's feFlood and feTile filters
+                  based on a similar example in chapter 11 of 'SVG Essentials'
+                  by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/feFlood_feTile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG - feFlood and feTile</title>
+</head>
+<body>
+
+  <h1>SVG - feFlood and feTile filters</h1>
+
+  <svg width="450" height="225" viewBox="0 0 800 400"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>SVG - feFlood and feTile</title>
+
+   <!-- define the filters -->
+   <defs>
+
+   <filter id="flood" filterUnits="userSpaceOnUse">
+
+     <feImage xlink:href="https://cdn.jsdelivr.net/gh/aronnax77/svg/svg_essentials/chapter%2011/svg/spring_flower.svg"
+        x="0" y="0" width="400" height="400" result="flower" />
+     <feFlood flood-color="#003399" flood-opacity="0.8" result="tint" />
+     <feComposite in="tint" in2="flower" operator="in" />
+
+    </filter>
+
+    <filter id="tile" filterUnits="userSpaceOnUse">
+
+      <feImage xlink:href="https://cdn.jsdelivr.net/gh/aronnax77/svg/svg_essentials/chapter%2011/svg/spring_flower.svg"
+         x="0" y="0" width="400" height="400" result="flower" />
+      <feImage xlink:href="https://cdn.jsdelivr.net/gh/aronnax77/svg/svg_essentials/chapter%2011/svg/pattern.svg"
+         x="0" y="0" width="20" height="20" result="pattern" />
+      <feTile in="pattern" result="pattern" />
+      <feComposite in="pattern" in2="flower" operator="in" />
+
+     </filter>
+
+   </defs>
+
+   <!-- provide a white background -->
+   <rect x="0" y="0" width="100%" height="100%"
+     style="fill: #fff; stroke: none;" />
+
+   <g filter="url(#tile)" transform="translate(400, 0)"></g>
+   <g filter="url(#flood)"></g>
+
+   <!-- text -->
+   <g id="txt" style="font-weight: bold; font-size: 1.5em;">
+     <text x="100" y="300">feFlood</text>
+     <text x="500" y="300">feTile</text>
+   </g>
+
+ </svg>
+
+</body>
+</html>

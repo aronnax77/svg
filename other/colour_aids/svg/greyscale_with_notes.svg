@@ -1,0 +1,88 @@
+<svg width="500" height="500" viewBox="0 0 500 500"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>Photographers Greyscale</title>
+
+   <!-- provide a white background -->
+   <rect x="0" y="0" width="100%" height="100%"
+     style="fill: #fff; stroke: none;" />
+
+   <svg x="45" y="45" width="210" height="395" viewBox="0 0 210 395"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Greyscale</title>
+
+   <!-- grey scale -->
+   <g id="greyscale" style="stroke: #000;">
+     <rect x="5" y="5" width="200" height="35"
+       style="fill: #000000;" />
+     <rect x="5" y="40" width="200" height="35"
+       style="fill: #1a1a1a;" />
+     <rect x="5" y="75" width="200" height="35"
+       style="fill: #333333;" />
+     <rect x="5" y="110" width="200" height="35"
+       style="fill: #4d4d4d;" />
+     <rect x="5" y="145" width="200" height="35"
+       style="fill: #666666;" />
+     <rect x="5" y="180" width="200" height="35"
+       style="fill: #808080;" />
+     <rect x="5" y="215" width="200" height="35"
+       style="fill: #999999;" />
+     <rect x="5" y="250" width="200" height="35"
+       style="fill: #b3b3b3;" />
+     <rect x="5" y="285" width="200" height="35"
+       style="fill: #cccccc;" />
+     <rect x="5" y="320" width="200" height="35"
+       style="fill: #e6e6e6;" />
+     <rect x="5" y="355" width="200" height="35"
+       style="fill: #ffffff;" />
+    </g>
+
+  </svg>
+
+   <!-- text -->
+
+   <!-- titles -->
+   <text style="fill: #000; text-anchor: middle; font-size: 1.2em; font-weight: bold;">
+     <tspan x="150" y="40">Zone</tspan>
+     <tspan x="350" y="40">Values</tspan>
+   </text>
+
+   <!-- zones -->
+   <text
+     style="fill: #fff; text-anchor: middle; font-size: 1em;">
+     <tspan x="150" y="75">O</tspan>
+     <tspan x="150" dy="35">I</tspan>
+     <tspan x="150" dy="35">II</tspan>
+     <tspan x="150" dy="35">III</tspan>
+     <tspan x="150" dy="35">IV</tspan>
+     <tspan font-weight="bold" font-size="1.2em" x="150" dy="35">V</tspan>
+     <tspan x="150" dy="35">VI</tspan>
+     <tspan fill="#000" x="150" dy="35">VII</tspan>
+     <tspan fill="#000" x="150" dy="35">VIII</tspan>
+     <tspan fill="#000" x="150" dy="35">IX</tspan>
+     <tspan fill="#000" x="150" dy="35">X</tspan>
+   </text>
+
+   <!-- values -->
+   <text
+     style="fill: #000; text-anchor: middle; font-size: 1em;">
+     <tspan x="350" y="75">#000000</tspan>
+     <tspan x="350" dy="35">#1a1a1a</tspan>
+     <tspan x="350" dy="35">#333333</tspan>
+     <tspan x="350" dy="35">#4d4d4d</tspan>
+     <tspan x="350" dy="35">#666666</tspan>
+     <tspan x="350" dy="35">#808080</tspan>
+     <tspan x="350" dy="35">#999999</tspan>
+     <tspan x="350" dy="35">#b3b3b3</tspan>
+     <tspan x="350" dy="35">#cccccc</tspan>
+     <tspan x="350" dy="35">#e6e6e6</tspan>
+     <tspan x="350" dy="35">#ffffff</tspan>
+   </text>
+
+   <!-- title -->
+   <text x="250" y="480"
+     style="text-anchor: middle; font-size: 1.5em;
+     font-weight: bold;">Photographers Greyscale</text>
+
+</svg>

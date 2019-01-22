@@ -1,0 +1,35 @@
+/*                Author: Richard Myatt
+                  Date: 3 December 2018
+
+                  Exploring svg filters.  Example based on a tutorial by
+                  Smashing Magazine at
+                  https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/
+*/
+
+body {
+  background-color: #888;
+}
+
+.container {
+  width: 50vw;
+  height: 25vw;
+  margin: 50px auto;
+  -webkit-box-shadow: 5px 8px 3px #333;
+          box-shadow: 5px 8px 3px #333;
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .container {
+    width: 60vw;
+    height: 30vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 95vw;
+    height: 47.5vw;
+  }
+}

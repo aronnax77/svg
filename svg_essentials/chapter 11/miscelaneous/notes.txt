@@ -1,3 +1,5 @@
 An interesting introduction to the feColorMatrix - https://alistapart.com/article/finessing-fecolormatrix.
 
 Photo attribute - Photo by Elia Clerici from Pexels
+
+feTurbulance animated - https://css-tricks.com/squigglevision-in-css-and-svg/

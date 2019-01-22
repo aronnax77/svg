@@ -1,0 +1,118 @@
+<!--            Author: Richard Myatt
+                Date: 25 November 2018
+
+                A demo to show the feComposite filter in use based on a similar
+                demo at http://apike.ca/prog_svg_filter_feBlend.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/feBlend.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG - using the feBlend filter</title>
+</head>
+<body>
+
+  <h1>SVG - using the feBlend filter</h1>
+
+  <!-- container for our demo -->
+  <div class="container">
+
+    <svg width="100%" height="100%" viewBox="0 0 1210 810"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>SVG - using the feBlend filter</title>
+
+      <!-- define the various filters -->
+      <defs>
+
+        <filter id="fNormal" filterUnits="userSpaceOnUse">
+          <feImage xlink:href="images/cottage.jpg"
+            x="20" y="120" width="240" height="160" result="cottage" />
+          <feImage xlink:href="images/mountains.jpg"
+            x="140" y="180" width="240" height="160" result="mountains"/>
+          <feBlend in="cottage" in2="mountains" mode="normal"/>
+
+        </filter>
+
+        <filter id="fMultiply" filterUnits="userSpaceOnUse">
+          <feImage xlink:href="images/cottage.jpg"
+            x="20" y="120" width="240" height="160" result="cottage" />
+          <feImage xlink:href="images/mountains.jpg"
+            x="140" y="180" width="240" height="160" result="mountains"/>
+          <feBlend in="cottage" in2="mountains" mode="multiply"/>
+
+        </filter>
+
+        <filter id="fScreen" filterUnits="userSpaceOnUse">
+          <feImage xlink:href="images/cottage.jpg"
+            x="20" y="120" width="240" height="160" result="cottage" />
+          <feImage xlink:href="images/mountains.jpg"
+            x="140" y="180" width="240" height="160" result="mountains"/>
+          <feBlend in="cottage" in2="mountains" mode="screen"/>
+
+        </filter>
+
+        <filter id="fDarken" filterUnits="userSpaceOnUse">
+          <feImage xlink:href="images/cottage.jpg"
+            x="20" y="120" width="240" height="160" result="cottage" />
+          <feImage xlink:href="images/mountains.jpg"
+            x="140" y="180" width="240" height="160" result="mountains"/>
+          <feBlend in="cottage" in2="mountains" mode="darken"/>
+
+        </filter>
+
+        <filter id="fLighten" filterUnits="userSpaceOnUse">
+          <feImage xlink:href="images/cottage.jpg"
+            x="20" y="120" width="240" height="160" result="cottage" />
+          <feImage xlink:href="images/mountains.jpg"
+            x="140" y="180" width="240" height="160" result="mountains"/>
+          <feBlend in="cottage" in2="mountains" mode="lighten"/>
+
+        </filter>
+
+      </defs>
+
+      <!-- provide a white background -->
+      <rect x="0" y="0" width="100%" height="100%"
+        style="fill: #888; stroke: none;" />
+
+      <!-- render composite filter options -->
+          <g filter="url(#fNormal)" transform="translate(5 5)"></g>
+          <g filter="url(#fMultiply)" transform="translate(405 5)"></g>
+          <g filter="url(#fScreen)" transform="translate(805 5)"></g>
+          <g filter="url(#fDarken)" transform="translate(5 405)"></g>
+          <g filter="url(#fLighten)" transform="translate(405 405)"></g>
+
+      <!-- draw grid -->
+         <g id="grid"
+           style="fill: none; stroke-width: 2; stroke: #000;">
+
+           <rect x="5" y="5" width="1200" height="800" />
+           <line x1="5" y1="405" x2="1205" y2="405" />
+           <line x1="405" y1="5" x2="405" y2="805" />
+           <line x1="805" y1="5" x2="805" y2="805" />
+
+         </g>
+
+         <!-- provide text -->
+         <g id="text" text-anchor="middle"
+           style="font-weight: bold; font-size: 1.5em;">
+
+           <text x="205" y="55">mode="normal"</text>
+           <text x="605" y="55">mode="multiply"</text>
+           <text x="1005" y="55">mode="screen"</text>
+           <text x="205" y="455">mode="darken"</text>
+           <text x="605" y="455">mode="lighten"</text>
+
+         </g>
+
+    </svg>
+
+  </div>
+
+</body>
+</html>

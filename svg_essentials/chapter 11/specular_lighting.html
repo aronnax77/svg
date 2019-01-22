@@ -1,0 +1,56 @@
+<!--              Author: Richard Myatt
+                  Date: 26 November 2018
+
+                  An example of the use of the feSpecularLighting filter based
+                  on an example from chapter 11 of 'SVG Essentials' by J.
+                  David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/specular_lighting.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG - specular lighting demo</title>
+</head>
+<body>
+
+  <h1>SVG - specular lighting demo</h1>
+
+  <svg width="300" height="300" viewBox="0 0 100 100"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>SVG - specular lighting demo</title>
+
+   <defs>
+
+     <filter id="spec-light" color-interpolation-filters="sRGB">
+       <feImage xlink:href="svg/pattern02.svg" result="tile"
+         width="20" height="20" />
+       <feTile in="tile" result="tile" />
+
+       <feSpecularLighting	in="tile"
+					lighting-color="#00ff00"
+					surfaceScale="2"
+					specularConstant="1"
+					specularExponent="6"
+					result="specularOutput">
+					<feDistantLight	elevation="35"	azimuth="0"/>
+				</feSpecularLighting>
+
+        <feComposite in="specularOutput" in2="SourceGraphic" operator="in" />
+
+
+       </filter>
+     </defs>
+
+     <circle	id="green-light"	cx="50"	cy="50"	r="50"
+  		 style="fill:	#060; filter: url(#spec-light)" />
+
+   </svg>
+
+
+</body>
+</html>

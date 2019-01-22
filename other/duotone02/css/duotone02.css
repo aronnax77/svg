@@ -1,0 +1,31 @@
+/*                  Author: Richard Myatt
+                    Date: 1 December 2018
+
+                    A second look at duotone using svg.
+*/
+
+body {
+  background-color: #888;
+}
+
+.container {
+  width: 60vw;
+  height: 40vw;
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .container {
+    width: 80vw;
+    height: 53.6vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 100vw;
+    height: 66.67vw;
+  }
+}

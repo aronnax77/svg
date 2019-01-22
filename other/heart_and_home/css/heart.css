@@ -1,0 +1,35 @@
+/*                Author: Richard Myatt
+                  Date: 2 December 2018
+
+                  An exercise using SVG filters.
+*/
+
+body {
+  background-color: #ddd;
+}
+
+.container {
+  width: 40vw;
+  height: 32.73vw;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 8px 3px #888;
+          box-shadow: 5px 8px 3px #888;
+}
+
+@media only screen and (max-width: 1400px) {
+
+  .container {
+    width: 60vw;
+    height: 49.1vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 95vw;
+    height: 77.87vw;
+  }
+}

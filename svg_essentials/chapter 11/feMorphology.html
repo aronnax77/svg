@@ -1,0 +1,64 @@
+<!--              Author: Richard Myatt
+                  Date: 27 November 2018
+
+                  An example of the feMorphology filter based on a similar
+                  example in chapter 11 of 'SVG Essentials' by J. David Eisenberg.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/morphology.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG - feMorphology filter demo</title>
+</head>
+<body>
+
+  <h1>SVG - feMorphology filter demo</h1>
+
+  <svg width="460" height="180" viewBox="0 0 460 180"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+   <title>SVG - feMorphology filter demo</title>
+
+   <defs>
+
+     <image id="cat" xlink:href="images/cat.svg" x="0" y="0" width="140" height="170" />
+
+     <filter	id="erode">
+				<feMorphology	operator="erode"	radius="1"/>
+		</filter>
+
+		<filter	id="dilate">
+				<feMorphology	operator="dilate"	radius="2"/>
+		</filter>
+
+   </defs>
+
+   <!-- add a white background -->
+   <rect x="0" y="0" width="100%" height="100%"
+     style="fill: #fff; stroke: none;" />
+
+   <use xlink:href="#cat" x="0" y="0" width="140" height="170" />
+   <use xlink:href="#cat" x="0" y="0" width="140" height="170"
+   transform="translate(160, 0)" filter="url(#erode)" />
+   <use xlink:href="#cat" x="0" y="0" width="140" height="170"
+   transform="translate(320, 0)" filter="url(#dilate)" />
+
+
+   <!-- captions -->
+   <g style="font-family: sans-serif; font-size: 14pt;
+     text-anchor: middle; stroke: none; fill: black;">
+     <text x="70" y="170" >Normal</text>
+     <text x="230" y="170" >erode</text>
+     <text x="390" y="170" >dilate</text>
+   </g>
+
+
+ </svg>
+
+
+</body>
+</html>
