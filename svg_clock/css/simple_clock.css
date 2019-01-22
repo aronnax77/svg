@@ -1,0 +1,39 @@
+/*              Author: Richard Myatt
+                Date: 20 January 2019
+
+                A simple clock written using SVG
+*/
+
+body {
+  background-color: #eee;
+}
+
+.container {
+  width: 40vw;
+  height: 40vw;
+  margin: 50px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.4) inset,
+                      5px 5px 10px rgba(0, 0, 0, 0.1) inset,
+                      5px 5px 20px rgba(0, 0, 0, 0.7);
+          box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.4) inset,
+                      5px 5px 10px rgba(0, 0, 0, 0.1) inset,
+                      5px 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .container {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    width: 90vw;
+    height: 90vw;
+  }
+}
