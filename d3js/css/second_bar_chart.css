@@ -1,0 +1,26 @@
+/*          Author: Richard Myatt
+              Date: 29 January 2019
+
+              Another example of a bar chart based on an example from 'Interactive Data Visualization for the web' by Scott Murray.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+#svg-container {
+  width: 500px;
+  height: 300px;
+  margin-left: 20px;
+}
+
+#notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

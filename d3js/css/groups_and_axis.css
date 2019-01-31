@@ -1,0 +1,19 @@
+/*            Author: Richard Myatt
+              Date: 26 January 2019
+
+              A simple bar chart using d3js based on a tutorial series by d3Vienno.
+              at https://www.youtube.com/watch?v=n5NcCoa9dDU&list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p
+              Adding a title, groups and an axis.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg {
+  margin-left: 20px;
+}

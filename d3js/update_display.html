@@ -1,0 +1,41 @@
+<!--          Author: Richard Myatt
+              Date: 27 January 2019
+
+              Revision: 27 January 2019 -Notes added.
+
+              A simple bar chart using d3js based on a tutorial series by d3Vienno.
+              at https://www.youtube.com/watch?v=n5NcCoa9dDU&list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p
+              Updating the display.  In this case two sets of data are used at 1s intervals.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/update_display.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>d3js - update display</title>
+</head>
+<body>
+
+  <h1>d3js - update display</h1>
+
+  <div id="data-container">
+    <!-- data is displayed here -->
+  </div>
+
+  <div id="notes">
+    <h3>Notes:</h3>
+    <p>This is an example of a simple bar chart using d3js illustrating how the data can be dynamically updated.  In this case two data arrays are provided in the javascript: dataArray1, and dataArray2.  These two sets of data are then used alternately to update the display at one second intervals.</p>
+
+    <p>d3js provides three basic methods for dealing with changes in the data; update, enter, and exit.  In this case the update method is used since the number of data entries remains the same in each array.  Use of enter is also illustrated in this code.  The exit method allows for removal of data.</p>
+
+    <p>Please see accompanying code for details.</p>
+  </div>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="js/update_display.js"></script>
+
+</body>
+</html>
