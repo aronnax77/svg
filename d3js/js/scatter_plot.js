@@ -1,6 +1,9 @@
 /*            Author: Richard Myatt
               Date: 30 January 2019
 
+              Revision: 30 January 2019.  Rationalised rendering of plot and axis
+              using a reversed y scale for both.
+
               A scatter plot based on an example from 'Interactive Data Visualization for the web' by Scott Murray
 */
 
@@ -38,15 +41,10 @@ var xScale = d3.scaleLinear()
 // provide and y scale
 var yScale = d3.scaleLinear()
                 .domain([0, ymax])
-                .range([0, 200]);
-
-// provide a scale for the y axis
-var yAxisScale = d3.scaleLinear()
-                .domain([0, ymax])
                 .range([200, 0]);
 
 //  provide an y axis to the left of the chart
-var yAxis        = d3.axisLeft(yAxisScale);
+var yAxis        = d3.axisLeft(yScale);
 
 var xAxis        = d3.axisBottom(xScale);
 
@@ -76,7 +74,7 @@ scatterGroup.selectAll("circle")
     .enter()
       .append("circle")
       .attr("cx", function(d) { return xScale(d[0]); })
-      .attr("cy", function(d) { return graphHeight - yScale(d[1]); })
+      .attr("cy", function(d) { return yScale(d[1]); })
       .attr("r", 3)
       .style("fill", "red");
 
@@ -88,7 +86,7 @@ scatterGroup.selectAll("text")
       .text(function(d) { return "(" + d[0] + ", " + d[1] + ")"; })
       .attr("text-anchor", "start")
       .attr("x", function(d) { return xScale(d[0] + 3); })
-      .attr("y", function(d) { return graphHeight - yScale(d[1] + 3); })
+      .attr("y", function(d) { return yScale(d[1] + 3); })
       .attr("font-family", "sans-serif")
       .attr("font-size", "11px")
       .attr("fill", "black");
