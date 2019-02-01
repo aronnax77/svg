@@ -4,6 +4,10 @@
               Revision: 30 January 2019.  Rationalised rendering of plot and axis
               using a reversed y scale for both.
 
+              Revision: 1 February 2019.  Padding added and calculation of maximum
+              values modified to use d3 more effectively.  Background colour changed
+              and external border added.  Colour of text and axis changed.
+
               A scatter plot based on an example from 'Interactive Data Visualization for the web' by Scott Murray
 */
 
@@ -12,10 +16,9 @@ var svgWidth    = 500;  // width of svg
 var svgHeight   = 300;  // height of svg
 var graphHeight = 200;  // maximum height of bar graph
 var graphWidth  = 400;  // maximum width of bar graph
+var padding     = 20;   // allow some padding at maximum range of data
 
-var xmin, xmax, ymin, ymax;
-var xArray = [];
-var yArray = [];
+var xmax, ymax;
 
 // define the data setNum
 var dataset = [
@@ -23,15 +26,9 @@ var dataset = [
                 [410, 12], [475, 44], [25, 67], [85, 21], [220, 88]
               ];
 
-// get seperate arrays for x and y
-for(var i = 0; i < dataset.length; i++) {
-  xArray.push(dataset[i][0]);
-  yArray.push(dataset[i][1]);
-}
-
 // get x and y max
-xmax = d3.max(xArray);
-ymax = d3.max(yArray);
+xmax = d3.max(dataset, function(d) { return d[0]; }) + padding;
+ymax = d3.max(dataset, function(d) { return d[1]; }) + padding;
 
 // provide and x scale
 var xScale = d3.scaleLinear()
@@ -44,9 +41,11 @@ var yScale = d3.scaleLinear()
                 .range([200, 0]);
 
 //  provide an y axis to the left of the chart
-var yAxis        = d3.axisLeft(yScale);
+var yAxis        = d3.axisLeft(yScale)
+                      .ticks(5);
 
-var xAxis        = d3.axisBottom(xScale);
+var xAxis        = d3.axisBottom(xScale)
+                      .ticks(5);
 
 // append svg to its container
 // append svg to its container
@@ -62,7 +61,7 @@ var bg        = svg.append("rect")
                   .attr("y", 0)
                   .attr("width", "100%")
                   .attr("height", "100%")
-                  .style("fill", "white");
+                  .style("fill", "lightyellow");
 
 // provide a group element to hold the plot and position within svg
 var scatterGroup  = svg.append("g")
@@ -89,15 +88,17 @@ scatterGroup.selectAll("text")
       .attr("y", function(d) { return yScale(d[1] + 3); })
       .attr("font-family", "sans-serif")
       .attr("font-size", "11px")
-      .attr("fill", "black");
+      .attr("fill", "darkblue");
 
 // form a group for the y axis
 var yAxisGroup = svg.append("g")
+                  .attr("class", "axis")
                   .attr("transform", "translate(40, 50)")
                   .call(yAxis);
 
 // form a group for the x axis
 var yAxisGroup = svg.append("g")
+                  .attr("class", "axis")
                   .attr("transform", "translate(40, 250)")
                   .call(xAxis);
 
@@ -106,6 +107,7 @@ svg.append("text")
     .attr("font-size", 20)
     .style("font-weight", "bold")
     .attr("x", 250)
-    .attr("y", 30)
+    .attr("y", 40)
     .attr("text-anchor", "middle")
+    .attr("fill", "darkblue")
     .text("Scatter Plot");

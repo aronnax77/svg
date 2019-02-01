@@ -4,12 +4,13 @@
               Revision: 30 January 2019.  Rationalised rendering of plot and axis
               using a reversed y scale for both.
 
+              Revision: 1 February 2019.  Padding added and calculation of maximum
+              values modified to use d3 more effectively.  Background colour changed
+              and external border added.  Colour of text and axis changed.
+
               A scatter plot based on an example from 'Interactive Data Visualization for the web' by Scott Murray
 */
 
-body {
-  background-color: #eee;
-}
 
 h1 {
   font-size: 25px;
@@ -20,10 +21,22 @@ h1 {
   width: 500px;
   height: 300px;
   margin-left: 20px;
+  border: 2px solid black;
 }
 
 #notes {
   width: 450px;
   text-align: justify;
   margin-left: 20px;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: darkblue;
+}
+
+.axis text {
+  font-family: sans-serif;
+  font-size: 11px;
+  fill: darkblue;
 }
