@@ -1,3 +1,10 @@
+/*            Author: Richard Myatt
+              Date: 3 March 2019
+
+              An example which is based on a modified version of a Snap.svg
+              Animation Tutorial for Beginners at
+              http://goinkscape.com/how-to-animate-icons-with-inkscape-and-snap-svg/.
+*/
 
 h1 {
   text-align: center;
@@ -5,8 +12,8 @@ h1 {
 }
 
 #container {
-  width: 200px;
-  height: 200px;
+  width: 75px;
+  height: 75px;
   margin: 30px auto;
 }
 

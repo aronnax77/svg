@@ -1,11 +1,10 @@
-/*window.onload = function() {
-  var s = Snap("#svgDiv");
-  console.log(s);
-  Snap.load("svg/icon.svg", function(f) {
-    whiteRect = f.select("#icon");
-    s.append(f);
-  });
-};*/
+/*            Author: Richard Myatt
+              Date: 3 March 2019
+
+              An example which is based on a modified version of a Snap.svg
+              Animation Tutorial for Beginners at
+              http://goinkscape.com/how-to-animate-icons-with-inkscape-and-snap-svg/.
+*/
 
 // reference an outer svg to act as the container for our external file
 var s = Snap("#svgout");
@@ -16,7 +15,7 @@ s.attr({
   height: "100%"
 });
 // load the external file
-Snap.load("svg/demo.svg", onSVGLoaded ) ;
+Snap.load("https://cdn.jsdelivr.net/gh/aronnax77/svg/snap.svg/inkscape_demo/svg/demo.svg", onSVGLoaded ) ;
 
 function onSVGLoaded( data ){
 
@@ -30,7 +29,15 @@ function onSVGLoaded( data ){
               whiteRect.animate({y: -325}, 300, mina.elastic);
             });
 
+  icon.touchstart(function() {
+              whiteRect.animate({y: -325}, 300, mina.elastic);
+            });
+
   icon.mouseout(function() {
+              whiteRect.animate({y: -305.62088}, 300, mina.elestic);
+            });
+
+  icon.touchend(function() {
               whiteRect.animate({y: -305.62088}, 300, mina.elestic);
             });
 
