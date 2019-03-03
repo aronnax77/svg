@@ -1,0 +1,21 @@
+The best tutorial perhaps - http://svg.dabbles.info/
+
+Snap.svg API              - http://snapsvg.io/docs/
+
+Getting started with Snap - https://www.i-programmer.info/programming/javascript/6537-getting-started-with-snapsvg.html
+
+Short tutorial            - https://webdesign.tutsplus.com/articles/how-to-manipulate-and-animate-svg-with-snapsvg--cms-21323
+
+Sitepoint tutorial        - https://www.sitepoint.com/introduction-snap-svg/
+
+Getting started           - http://snapsvg.io/start/
+
+
+Snap.svg Animation Tutorial for Beginners - http://goinkscape.com/how-to-animate-icons-with-inkscape-and-snap-svg/
+
+SNAP-SVG-CHEAT-SHEET.md - https://gist.github.com/osvik/0185cb4381b35aad3d3e1f5438ca5ca4
+
+Loading into a div:
+Google query - snap.svg put svg inside a div
+https://stackoverflow.com/questions/20110422/load-svg-into-a-specific-div-with-snap-svg
+https://jsfiddle.net/JayKandari/prga26ak/

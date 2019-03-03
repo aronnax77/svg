@@ -1,0 +1,25 @@
+/*              Author: Richard Myatt
+                Date: 27 February 2019
+
+                Adding an image to an SVG element using snap.svg.  This example
+                also shows how the image can be cloned and transformed and is
+                based on a similar example in http://svg.dabbles.info/.
+*/
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg {
+  margin-left: 20px;
+}
+
+#notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

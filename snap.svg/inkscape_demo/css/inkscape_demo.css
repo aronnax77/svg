@@ -1,0 +1,17 @@
+
+h1 {
+  text-align: center;
+  font-size: 25px;
+}
+
+#container {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+}
+
+#notes {
+  width: 450px;
+  text-align: justify;
+  margin: 0 auto;
+}

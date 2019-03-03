@@ -1,0 +1,24 @@
+/*              Author: Richard Myatt
+                Date: 25 February 2019
+
+                A simple example using snap.svg based on a similar example in
+                http://svg.dabbles.info/.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg {
+  margin-left: 20px;
+}
+
+#notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
