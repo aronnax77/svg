@@ -1,0 +1,24 @@
+/*            Author: Richard Myatt
+              Date: 4 March 2019
+
+              An example which shows the use of masks and patterns using snap.svg.
+*/
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+#svgout {
+  margin-left: 20px;
+}
+
+#notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
