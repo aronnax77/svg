@@ -1,0 +1,31 @@
+/*            Author: Richard Myatt
+              Date: 5 March 2019
+
+              An example of an analog clock written using snap.svg based on a
+              similar example in chapter 14 of 'SVG Essentials'
+              by J. David Eisenberg.
+*/
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+#clock {
+  margin-left: 120px;
+}
+
+#header {
+  width: 450px;
+}
+
+#notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}
