@@ -1,0 +1,24 @@
+/*            Author: Richard Myatt
+              Date: 6 March 2019
+
+              An example of using the more general animation method Snap.animate
+              based on a similar example in http://svg.dabbles.info/.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg {
+  margin-left: 20px;
+}
+
+#notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

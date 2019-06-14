@@ -4,14 +4,16 @@ Snap.svg API              - http://snapsvg.io/docs/
 
 Getting started with Snap - https://www.i-programmer.info/programming/javascript/6537-getting-started-with-snapsvg.html
 
-Short tutorial            - https://webdesign.tutsplus.com/articles/how-to-manipulate-and-animate-svg-with-snapsvg--cms-21323
-
 Sitepoint tutorial        - https://www.sitepoint.com/introduction-snap-svg/
 
 Getting started           - http://snapsvg.io/start/
 
+tuts tutorial             - https://webdesign.tutsplus.com/articles/how-to-manipulate-and-animate-svg-with-snapsvg--cms-21323
 
-Snap.svg Animation Tutorial for Beginners - http://goinkscape.com/how-to-animate-icons-with-inkscape-and-snap-svg/
+Advanced Snap.svg         - https://www.sitepoint.com/advanced-snap-svg/  -- this mentions three ways to form a set
+
+Snap.svg Animation Examples - http://svgdiscovery.com/Snap.svg/Animation/Snap-Animation-Examples.htm
+
 
 SNAP-SVG-CHEAT-SHEET.md - https://gist.github.com/osvik/0185cb4381b35aad3d3e1f5438ca5ca4
 

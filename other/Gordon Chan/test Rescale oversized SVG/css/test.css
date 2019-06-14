@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vh;
+  height: 100vh.
+  overflow: hidden;
+}
+
+#hero{
+    background-color:red;
+}
+
+button{
+    height:30vh;
+    width:80vw;
+    position:absolute ;
+}
+
+@media screen and (orientation landscape) {
+  .container {
+    width: 100vh;
+    overflow: hidden;
+  }
+}

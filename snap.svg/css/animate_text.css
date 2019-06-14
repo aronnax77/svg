@@ -1,0 +1,25 @@
+/*            Author: Richard Myatt
+              Date: 7 March 2019
+
+              An example of text animation using snap.svg
+              based on a similar example in http://svg.dabbles.info/.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+svg {
+  margin-left: 20px;
+}
+
+#notes {
+  width: 500px;
+  text-align: justify;
+  margin-left: 20px;
+}

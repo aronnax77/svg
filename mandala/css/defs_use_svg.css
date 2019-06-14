@@ -1,0 +1,29 @@
+/*                Author: Richard Myatt
+                  Date: 6 June 2019
+
+                  An svg example of the use of a shape defined within defs
+                  and then rendered with use elements.  Please compare with the
+                  Snap.svg example at
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+#container {
+  width: 500px;
+  height: 200px;
+  margin-left: 20px;
+  background-color: lightyellow;
+}
+
+#notes {
+  width: 500px;
+  text-align: justify;
+  margin-left: 20px;
+}

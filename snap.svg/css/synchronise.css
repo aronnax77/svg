@@ -1,0 +1,26 @@
+/*            Author: Richard Myatt
+              Date: 8 March 2019
+
+              This example is copied with minor alterations from an example on
+              codepen at https://codepen.io/pigabo/pen/CyrHq and shows how two
+              animations can be synchronised using snap.svg.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+svg {
+  margin-left: 20px;
+}
+
+#notes {
+  width: 500px;
+  text-align: justify;
+  margin-left: 20px;
+}

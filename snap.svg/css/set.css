@@ -1,0 +1,27 @@
+/*            Author: Richard Myatt
+              Date: 9 March 2019
+
+              This example shows the use of a set in snap.svg and the way in
+              which the elements of the set can be animated and is based on an
+              example in an article 'Advanced Snap.svg' by Sitepoint at
+              https://www.sitepoint.com/advanced-snap-svg/.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+svg {
+  margin-left: 20px;
+}
+
+#notes {
+  width: 500px;
+  text-align: justify;
+  margin-left: 20px;
+}

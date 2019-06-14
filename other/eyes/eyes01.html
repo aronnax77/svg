@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/eyes01.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Eyes 01</title>
+</head>
+<body>
+
+  <!-- provide a container for our svg -->
+  <div class="container">
+
+    <svg id="square-svg" width="200" height="200" viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      onload="run()">
+
+      defs>
+        <script type="application/ecmascript">
+          <![CDATA[
+function run() {
+
+            // get references to svg and to the dot
+            var svgEl = document.querySelector("#square-svg");
+            var dotEl = document.querySelector("#dot");
+
+            // get the bounding client rect for the svg and calculate top x and
+            // y coordinates
+            var svgRect = svgEl.getBoundingClientRect();
+            var svgX = svgRect.x;
+            var svgY = svgRect.y;
+
+            // variable constants
+            var dotX = 100;      // x coordinate of dot
+            var dotY = 100;      // y coordinate of dot
+            var dotMax = 35;     // maximum travel for dot
+
+
+            function moveDot(evt) {
+
+              // get the mouse position
+              var mouseX = evt.clientX;
+              var mouseY = evt.clientY;
+
+              // local mouse position
+              var localX = mouseX - svgX;
+              var localY = mouseY - svgY;
+
+              // position reletive to dot
+              var dx = localX - dotX;
+              var dy = localY - dotY;
+
+              // distance between dot and mouse
+              var dist = Math.sqrt(dx*dx + dy*dy);
+
+              // move dot
+              if(dist < 35) {
+                dotEl.setAttribute("cx", localX);
+                dotEl.setAttribute("cy", localY);
+              } else {
+                dotEl.setAttribute("cx", dotX + dx * dotMax/dist);
+                dotEl.setAttribute("cy", dotY + dy * dotMax/dist);
+              }
+            }
+
+            svgEl.addEventListener("mousemove", moveDot);
+}
+          ]]>
+        </script>
+      </defs>
+
+      <!-- provide a white background -->
+      <rect x="0" y="0" width="100%" height="100%"
+        style="fill: #fff; stroke: none;" />
+
+      <!-- the main circle -->
+      <circle cx="100" cy="100" r="50"
+        style="fill: #fff; stroke: #000; stroke-width: 5px;" />
+
+      <!-- the enclosed circle -->
+      <circle id="dot" cx="100" cy="100" r="10"
+        style="fill: #000; stroke: none;" />
+
+    </svg>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+/*                Author: Richard Myatt
+                  Date: 26 October 2018
+
+                  Mouse tracking within an svg image.
+*/
+
+body {
+  background-color: #eee;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}

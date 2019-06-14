@@ -1,0 +1,24 @@
+/*            Author: Richard Myatt
+              Date: 26 October 2018
+
+              Tracking mouse movements within an svg.
+              See Mouse tracking within an svg at
+              https://code.sololearn.com/WnDoJTIPJj2n/#html
+              for a demo.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightyellow;
+}
+
+.container {
+  width: 74.87vh;
+  height: 100vh;
+  margin: 0 auto;
+}

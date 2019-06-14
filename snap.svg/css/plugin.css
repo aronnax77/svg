@@ -1,0 +1,33 @@
+/*            Author: Richard Myatt
+              Date: 11 March 2019
+
+              The snap.svg plugin allows you to write functions which access
+              the bounding box of an element.  This simple example of a
+              snap.svg plugin returns the center of an element and is based on
+              a similar example in http://svg.dabbles.info/.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+svg {
+  margin-left: 20px;
+}
+
+#p1, #p2, #p3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: blue;
+}
+
+#notes {
+  width: 500px;
+  text-align: justify;
+  margin-left: 20px;
+}

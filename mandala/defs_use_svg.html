@@ -1,0 +1,76 @@
+<!--              Author: Richard Myatt
+                  Date: 6 June 2019
+
+                  An svg example of the use of a shape defined within defs
+                  and then rendered with use elements.  Please compare with the
+                  Snap.svg example at
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/defs_use_svg.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>defs/use demo</title>
+</head>
+<body>
+
+  <h1>defs/use demo</h1>
+
+  <div id="container">
+    <svg id="svg-demo" width="100%" height="100%" viewBox="0 0 500 200"
+       xmlns="http://www.w3.org/2000/svg">
+       <title>defs/use demo</title>
+       <desc>A demo which uses an element defined in defs</desc>
+
+       <defs>
+
+         <!-- define the square element -->
+         <rect id="square" x="-50" y="-50" width="100" height="100" />
+
+       </defs>
+
+       <!-- use the square element -->
+       <!-- first figure -->
+       <use xlink:href="#square"
+         transform="translate(100, 100)"
+         style="fill: blue;"; />
+       <use xlink:href="#square"
+         transform="translate(100, 100) scale(0.5) rotate(45)"
+         style="fill: red;"; />
+
+       <!-- second figure -->
+       <use xlink:href="#square"
+         transform="translate(250, 100)"
+         style="fill: blue;"; />
+       <use xlink:href="#square"
+         transform="translate(250, 100) scale(0.5) rotate(45)"
+         style="fill: red;"; />
+
+       <!-- third figure -->
+       <use xlink:href="#square"
+         transform="translate(400, 100)"
+         style="fill: blue;"; />
+       <use xlink:href="#square"
+         transform="translate(400, 100) scale(0.5) rotate(45)"
+         style="fill: red;"; />
+
+    </svg>
+  </div>
+
+  <!-- provide some notes of explanation -->
+  <div id="notes">
+    <h3>Notes:</h3>
+
+    <p>An example of the use of plain svg which provides a shape within defs which is then used to render the figures on the canvas with use elements.  Please compare this with </p>
+
+    <p>Please see accompanying code for details.</p>
+  </div>
+
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>-->
+  <!--<script src="snap/snap.svg-min.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/eyes03.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Eyes 03</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <svg id="two-eyes" width="400" height="200" viewBox="0 0 400 200"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      onload="run()">
+
+      <defs>
+        <script type="application/ecmascript">
+          <![CDATA[
+
+            function run() {
+              // get references to svg and to the dot
+              var svgEl = document.querySelector("#two-eyes");
+              var leftPupil = document.querySelector("#leftPupil");
+              var rightPupil = document.querySelector("#rightPupil");
+
+              // create and svg point
+              var pt = svgEl.createSVGPoint();
+
+              // variable constants
+              var leftX = 100;      // x coordinate of left pupil
+              var leftY = 100;      // y coordinate of left pupil
+              var rightX = 300;     // x coordinate of right pupil
+              var rightY = 100;     // y coordinate of right pupil
+              var maxTravel = 35;   // maximum travel for pupil
+
+
+              function movePupils(evt) {
+
+                // set point to position clicked
+                pt.x = evt.clientX;
+                pt.y = evt.clientY;
+
+                // obtain local coordinates within the svg
+                var svgP = pt.matrixTransform(svgEl.getScreenCTM().inverse());
+
+                // local mouse position
+                var localX = svgP.x;
+                var localY = svgP.y;
+
+                //LEFT EYE
+                // position reletive to dot
+                var dxLeft = localX - leftX;
+                var dyLeft = localY - leftY;
+
+                // distance between dot and mouse
+                var dist = Math.sqrt(dxLeft*dxLeft + dyLeft*dyLeft);
+
+                // move dot
+                if(dist < maxTravel) {
+                  leftPupil.setAttribute("cx", localX);
+                  leftPupil.setAttribute("cy", localY);
+                } else {
+                  leftPupil.setAttribute("cx", leftX + dxLeft * maxTravel/dist);
+                  leftPupil.setAttribute("cy", leftY + dyLeft * maxTravel/dist);
+                }
+
+                // RIGHT EYE
+                // position reletive to dot
+                var dxRight = localX - rightX;
+                var dyRight = localY - rightY;
+
+                // distance between dot and mouse
+                var dist = Math.sqrt(dxRight*dxRight + dyRight*dyRight);
+
+                // move dot
+                if(dist < maxTravel) {
+                  rightPupil.setAttribute("cx", localX);
+                  rightPupil.setAttribute("cy", localY);
+                } else {
+                  rightPupil.setAttribute("cx", rightX + dxRight * maxTravel/dist);
+                  rightPupil.setAttribute("cy", rightY + dyRight * maxTravel/dist);
+                }
+              }
+
+              svgEl.addEventListener("mousemove", movePupils);
+            }
+          ]]>
+        </script>
+      </defs>
+
+      <!-- provide a white background -->
+      <rect x="0" y="0" width="100%" height="100%"
+        style="fill: #fff; stroke: none;" />
+
+
+      <!-- LEFT EYE -->
+      <!-- left eye rim -->
+      <circle cx="100" cy="100" r="50"
+        style="fill: #fff; stroke: #000; stroke-width: 5px;" />
+
+      <!-- left pupio -->
+      <circle id="leftPupil" cx="100" cy="100" r="10"
+        style="fill: #000; stroke: none;" />
+
+      <!-- RIGHT EYE -->
+      <!-- right eye rim -->
+      <circle cx="300" cy="100" r="50"
+        style="fill: #fff; stroke: #000; stroke-width: 5px;" />
+
+      <!-- right pupil -->
+      <circle id="rightPupil" cx="300" cy="100" r="10"
+        style="fill: #000; stroke: none;" />
+
+    </svg>
+
+  </div>
+
+</body>
+</html>

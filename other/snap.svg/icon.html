@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inkscape Animated Icon (using Snap.svg)</title>
+</head>
+<body>
+
+  <div id="iconDiv"></div>
+
+  <script src="snap.svg-min.js"></script>
+
+  <script>
+  //Run script right away
+    window.onload = function () {
+      //We'll be appending the icon to this DIV later
+      var s = Snap("#iconDiv");
+      //Have Snap load the SVG file
+      Snap.load("icon.svg", function(f) {
+      //Assign the white rectangle
+      whiteRect = f.select("#whiteRect");
+      //Assign the whole icon group
+      icon = f.select("#icon");
+      //When the icon is hovered over, have the white rectangle move up slightly with elastic properties
+      icon.hover(function() {
+        whiteRect.animate({y:960}, 500, mina.elastic);
+                  },
+                  //And return to original position when not hovered over
+                  function() {
+                    whiteRect.animate({y:977.36218}, 500, mina.elastic);
+                    }
+                  );
+      //Finally append the icon to iconDiv in the body
+      s.append(f);
+      });
+    };
+  </script>
+
+</body>
+</html>

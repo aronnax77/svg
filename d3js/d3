@@ -1,0 +1,13 @@
+https://www.dashingd3js.com/table-of-contents
+
+API Reference - https://github.com/d3/d3/wiki
+
+d3.max(dataset, function(d) {
+return d[0]; //References first value in each subarray
+});
+
+Histogram:
+
+https://d3-wiki.readthedocs.io/zh_CN/master/Histogram-Layout/
+
+http://bl.ocks.org/nnattawat/8916402

@@ -1,0 +1,27 @@
+/*            Author: Richard Myatt
+              Date: 11 February 2019
+
+              An example of a histogram using d3js.
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+#svg-container {
+  width: 500px;
+  height: 300px;
+  margin-left: 20px;
+  border: 2px solid black;
+}
+
+#notes {
+  width: 450px;
+  text-align: justify;
+  margin-left: 20px;
+}

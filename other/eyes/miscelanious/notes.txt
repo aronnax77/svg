@@ -1,0 +1,10 @@
+Article on coordinates: https://javascript.info/coordinates
+
+<a href='https://www.freepik.com/free-photo/fresh-pumpkin_1129835.htm'>Designed by Topntp26</a>
+<a href='https://www.freepik.com/free-photo/fresh-pumpkin_1129836.htm'>Designed by Topntp26</a>
+
+Tutorial on tracking mouse position
+http://wphooper.com/svg/examples/mouse_positions.php
+
+Translating coordinates
+https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/

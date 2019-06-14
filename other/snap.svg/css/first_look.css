@@ -1,0 +1,18 @@
+/*             Author: Richard Myatt
+                Date: 12 November 2018
+
+                A first look at Snap.svg based on a YouTube video at
+                https://www.youtube.com/watch?v=MBA-1IHrPYY
+*/
+
+body {
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h1, svg {
+  margin-left: 20px;
+}
